@@ -26,15 +26,15 @@ const toMongoDB = (str): string =>
 /**
  * Looks for all rule names that have `.ts` extension in order
  * to replace them with `.mongodb` extension. The MongoDB language
- * that built by this project is going to be used
+ * that is built by this project is going to be used
  * by the official MongoDB VSCode plugin
  * that introduces a new `.mongodb` extention for its playground.
  *
  * @see https://github.com/mongodb-js/vscode
  *
- * @param {String} str - The original rule name.
+ * @param {String} item - The pattern or the repository item of the TypeScript grammar.
  *
- * @returns {String} - The rule name without `.ts`.
+ * @returns {Object} - The MongoDB grammar item.
  */
 const replaceExtension = (item): string => {
   if (item.name) {
@@ -69,7 +69,7 @@ const mongoDBGrammarJSON = {
   repository
 };
 
-// Create the `mongodb.tmLanguage.json` file with the MongoDB compatible grammar.
+// Creates the `mongodb.tmLanguage.json` file with the MongoDB compatible grammar.
 fs.unlink(`${SYNTAXES_DIR}/mongodb.tmLanguage.json`, (unlinkFileError) => {
   if (!unlinkFileError || unlinkFileError.code === 'ENOENT') {
     fs.writeFile(
