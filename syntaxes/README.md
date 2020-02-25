@@ -8,7 +8,7 @@ If you downloaded a new version of the TypeScript grammar you can update the Mon
 
 The script does the following changes:
 
-- Uses the `TypeScript.tmLanguage` grammar to build the MongoDB compatible JSON grammar.
+- Uses the `TypeScript.tmLanguage` grammar and builds the MongoDB compatible JSON grammar.
 - Updates `.ts` file types, rule names and scope to `.mongodb`.
 - Saves `mongodb.tmLanguage.json` to `syntaxes` folder.
 
