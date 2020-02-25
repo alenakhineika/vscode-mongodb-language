@@ -1,9 +1,7 @@
 {
   "name": "MongoDB",
   "scopeName": "source.mongodb",
-  "fileTypes": [
-    "mongodb"
-  ],
+  "fileTypes": ["mongodb"],
   "patterns": [
     {
       "include": "#directives"

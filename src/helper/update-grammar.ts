@@ -5,13 +5,37 @@ const tsGrammarPlist = fs.readFileSync('./grammar/TypeScript.tmLanguage');
 const tsGrammarJSON = plist.parse(tsGrammarPlist.toString('utf8'));
 const SYNTAXES_DIR = path.resolve('./syntaxes/');
 
-const toMongoDB = (str): string => str.split(' ').map((prop) => {
-  const item = path.parse(prop);
-  const itemExt = (item.ext === '.ts') ? '.mongodb' : item.ext;
+/**
+ * Updates `.ts` rule names to `.mongodb`.
+ *
+ * @param {String} str - The original rule name.
+ *
+ * @returns {String} - The rule name where `.ts` replaced with `.mongodb`.
+ */
+const toMongoDB = (str): string =>
+  str
+    .split(' ')
+    .map((prop) => {
+      const item = path.parse(prop);
+      const itemExt = item.ext === '.ts' ? '.mongodb' : item.ext;
 
-  return `${item.name}${itemExt}`;
-}).join(' ');
+      return `${item.name}${itemExt}`;
+    })
+    .join(' ');
 
+/**
+ * Looks for all rule names that have `.ts` extension in order
+ * to replace them with `.mongodb` extension. The MongoDB language
+ * that built by this project is going to be used
+ * by the official MongoDB VSCode plugin
+ * that introduces a new `.mongodb` extention for its playground.
+ *
+ * @see https://github.com/mongodb-js/vscode
+ *
+ * @param {String} str - The original rule name.
+ *
+ * @returns {String} - The rule name without `.ts`.
+ */
 const replaceExtension = (item): string => {
   if (item.name) {
     item.name = toMongoDB(item.name);
@@ -40,7 +64,7 @@ const repository = replaceExtension(tsGrammarJSON.repository);
 const mongoDBGrammarJSON = {
   name: 'MongoDB',
   scopeName: 'source.mongodb',
-  fileTypes: [ 'mongodb' ],
+  fileTypes: ['mongodb'],
   patterns,
   repository
 };
