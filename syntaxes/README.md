@@ -2,7 +2,7 @@
 
 The `mongodb.tmLanguage.json` file is derived from [TypeScript.tmLanguage](https://github.com/Microsoft/TypeScript-TmLanguage/blob/master/TypeScript.tmLanguage).
 
-If you downloaded a new version of the TypeScript grammar you can update the MongoDB grammar by running the following script:
+If you downloaded a new version of the TypeScript grammar you can update the MongoDB grammar by running the script:
 
 `npm run update-grammar`
 
@@ -14,4 +14,4 @@ The script does the following changes:
 
 ## mongodb-injection.json
 
-The mongodb-injection.json file contains only MongoDB related syntax.
+The `mongodb-injection.json` file contains only MongoDB related syntax that is defined in [mongodb-ace-mode](https://github.com/mongodb-js/ace-mode/blob/master/index.js#L63-L263).
