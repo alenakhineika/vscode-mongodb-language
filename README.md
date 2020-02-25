@@ -1,6 +1,6 @@
 # VSCode MongoDB Language Extension
 
-> The MongoDB language support for VSCode extentions.
+> The MongoDB syntax support for VSCode extentions.
 
 ![example](./example.png)
 
