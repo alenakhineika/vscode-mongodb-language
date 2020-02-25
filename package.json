@@ -1,0 +1,58 @@
+{
+    "name": "vscode-mongodb-language",
+    "displayName": "vscode-mongodb-language",
+    "description": "The MongoDB language support",
+    "version": "0.0.1",
+    "author": "Alena Khineika <alena.khineika@gmail.com>",
+    "license": "ISC",
+    "engines": {
+        "vscode": "^1.42.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "scripts": {
+        "update-grammar": "ts-node ./src/helper/update-grammar.ts"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "mongodb",
+                "aliases": [
+                    "MongoDB",
+                    "mongodb"
+                ],
+                "extensions": [
+                    ".mongodb"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "mongodb",
+                "scopeName": "source.mongodb",
+                "path": "./syntaxes/mongodb.tmLanguage.json"
+            },
+            {
+                "path": "./syntaxes/mongodb-injection.json",
+                "scopeName": "mongodb.injection",
+                "injectTo": [
+                  "source.mongodb"
+                ]
+              }
+        ]
+    },
+    "devDependencies": {
+        "@types/node": "^13.7.4",
+        "@types/vscode": "^1.42.0",
+        "@typescript-eslint/eslint-plugin": "^2.21.0",
+        "@typescript-eslint/parser": "^2.21.0",
+        "eslint": "^6.8.0",
+        "fast-plist": "^0.1.2",
+        "plist": "^3.0.1",
+        "ts-node": "^8.6.2",
+        "typescript": "^3.8.2"
+    },
+    "dependencies": {}
+}

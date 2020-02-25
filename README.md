@@ -1,0 +1,19 @@
+# VSCode MongoDB Language Extension
+
+> The MongoDB language support for VSCode extentions.
+
+![example](./example.png)
+
+Since [the MongoDB Shell](https://docs.mongodb.com/manual/mongo/) language is a JavaScript-based query language that supports extended JSON, also called BSON, it is beneficial to reuse the existing JavaScript grammar and inject it with the MongoDB keywords. In this case:
+
+- We get the JavaScript highlighting for free.
+- We don't have to maintain a grammar with the JavaScript syntax.
+- We can focus only on MongoDB keywords support.
+
+E.g. [The VSCode JavaScript grammar](https://github.com/microsoft/vscode/tree/master/extensions/javascript/syntaxes) is derived from the [TypeScriptReact.tmLanguage](https://github.com/Microsoft/TypeScript-TmLanguage/blob/master/TypeScriptReact.tmLanguage) grammar.
+
+The VSCode MongoDB Language extention:
+
+- Parses the [TypeScript.tmLanguage](https://github.com/Microsoft/TypeScript-TmLanguage/blob/master/TypeScript.tmLanguage) plist to the MongoDB compatible JSON grammar.
+- Updates `.ts` file types, rule names and scope to `.mongodb`.
+- Injects the TypeScript-based grammar with MongoDB aggregation symbols support.
