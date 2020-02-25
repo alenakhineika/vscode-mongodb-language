@@ -12,8 +12,4 @@ Since [the MongoDB Shell](https://docs.mongodb.com/manual/mongo/) language is a 
 
 E.g. [The VSCode JavaScript grammar](https://github.com/microsoft/vscode/tree/master/extensions/javascript/syntaxes) is derived from the [TypeScriptReact.tmLanguage](https://github.com/Microsoft/TypeScript-TmLanguage/blob/master/TypeScriptReact.tmLanguage) grammar.
 
-The VSCode MongoDB Language extention:
-
-- Parses the [TypeScript.tmLanguage](https://github.com/Microsoft/TypeScript-TmLanguage/blob/master/TypeScript.tmLanguage) plist to the MongoDB compatible JSON grammar.
-- Updates `.ts` file types, rule names and scope to `.mongodb`.
-- Injects the TypeScript-based grammar with MongoDB aggregation symbols support.
+The VSCode MongoDB Language extension injects the [TypeScript.tmLanguage](https://github.com/Microsoft/TypeScript-TmLanguage/blob/master/TypeScript.tmLanguage) grammar with MongoDB aggregation symbols support.
