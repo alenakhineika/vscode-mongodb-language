@@ -1,1 +1,1 @@
-The base TypeScript grammar that is maintained by Microsoft and consumed by TypeScript editors and plugins. Do not modify this file, you can replace it with the latest version tho. Check [TypeScript-TmLanguage](https://github.com/microsoft/TypeScript-TmLanguage) for more details.
+The TypeScript grammar that is maintained by Microsoft and consumed by TypeScript editors and plugins. Do not modify this file, you can replace it with the latest version tho. Check [TypeScript-TmLanguage](https://github.com/microsoft/TypeScript-TmLanguage) for more details.
