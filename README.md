@@ -1,8 +1,14 @@
 # VSCode MongoDB Language Extension
 
-> The MongoDB syntax support for VSCode extentions.
+The MongoDB language support for VSCode extensions.
 
 ![example](./example.png)
+
+## How to install
+
+The MongoDB Language Extension is not released. To start using this extension with VSCode copy it into the `<user home>/.vscode/extensions` folder and restart VSCode.
+
+## Description
 
 Since [the MongoDB Shell](https://docs.mongodb.com/manual/mongo/) language is a JavaScript-based query language that supports extended JSON, also called BSON, it is beneficial to reuse the existing JavaScript grammar and inject it with the MongoDB keywords. In this case:
 
