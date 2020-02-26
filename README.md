@@ -1,3 +1,5 @@
+> The project was moved to the MongoDB repository: https://github.com/mongodb-js/vscode-mongodb-language.
+
 # VSCode MongoDB Language Extension
 
 The MongoDB syntax support for VSCode extensions.
@@ -6,7 +8,7 @@ The MongoDB syntax support for VSCode extensions.
 
 ## How to install
 
-The MongoDB Language Extension is not released. To start using this extension with VSCode copy it into the `<user home>/.vscode/extensions` folder and restart VSCode.
+To try this extension copy it into the `<user home>/.vscode/extensions` folder and restart VSCode.
 
 ## Description
 
