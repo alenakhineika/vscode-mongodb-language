@@ -1,9 +1,11 @@
-const fs = require('fs');
-const path = require('path');
-const plist = require('fast-plist');
+import fs = require('fs');
+import path = require('path');
+import plist = require('fast-plist');
+
 const tsGrammarPlist = fs.readFileSync('./grammar/TypeScript.tmLanguage');
 const tsGrammarJSON = plist.parse(tsGrammarPlist.toString('utf8'));
-const SYNTAXES_DIR = path.resolve('./syntaxes/');
+const mongodbGrammar = path.resolve('./syntaxes/mongodb.tmLanguage.json');
+const mongodbSymbols = require(path.resolve('./syntaxes/mongodb-symbols.json'));
 
 /**
  * Updates `.ts` rule names to `.mongodb`.
@@ -63,17 +65,35 @@ const repository = replaceExtension(tsGrammarJSON.repository);
 
 const mongoDBGrammarJSON = {
   name: 'MongoDB',
+  uuid: tsGrammarJSON.uuid,
   scopeName: 'source.mongodb',
   fileTypes: ['mongodb'],
   patterns,
   repository
 };
 
-// Creates the `mongodb.tmLanguage.json` file with the MongoDB compatible grammar.
-fs.unlink(`${SYNTAXES_DIR}/mongodb.tmLanguage.json`, (unlinkFileError) => {
+// Inject the resulting grammar with MongoDB symbols
+Object.keys(mongodbSymbols).forEach((key) => {
+  mongodbSymbols[key].forEach((item) => {
+    const value = item.substring(1);
+
+    mongoDBGrammarJSON.repository['object-member'].patterns.unshift({
+      name: 'meta.object.member.mongodb',
+      match: `\\$${value}\\b`,
+      captures: {
+        0: {
+          name: `keyword.other.${key}.${value}.mongodb`
+        }
+      }
+    });
+  });
+});
+
+// Create the `mongodb.tmLanguage.json` file with the MongoDB grammar.
+fs.unlink(mongodbGrammar, (unlinkFileError) => {
   if (!unlinkFileError || unlinkFileError.code === 'ENOENT') {
     fs.writeFile(
-      `${SYNTAXES_DIR}/mongodb.tmLanguage.json`,
+      mongodbGrammar,
       JSON.stringify(mongoDBGrammarJSON, null, 2),
       'utf8',
       (writeFileError: Record<string, any> | null) => {
@@ -84,9 +104,7 @@ fs.unlink(`${SYNTAXES_DIR}/mongodb.tmLanguage.json`, (unlinkFileError) => {
           );
         }
 
-        console.log(
-          `${SYNTAXES_DIR}/mongodb.tmLanguage.json file has been saved`
-        );
+        console.log(`${mongodbGrammar} file has been saved`);
       }
     );
   } else {

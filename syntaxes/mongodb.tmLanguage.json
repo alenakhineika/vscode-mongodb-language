@@ -1,7 +1,10 @@
 {
   "name": "MongoDB",
+  "uuid": "ef98eb90-bf9b-11e4-bb52-0800200c9a66",
   "scopeName": "source.mongodb",
-  "fileTypes": ["mongodb"],
+  "fileTypes": [
+    "mongodb"
+  ],
   "patterns": [
     {
       "include": "#directives"
@@ -2548,6 +2551,1752 @@
     },
     "object-member": {
       "patterns": [
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$undefined\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggBSON.undefined.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$timestamp\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggBSON.timestamp.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$regularExpression\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggBSON.regularExpression.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$regex\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggBSON.regex.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$oid\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggBSON.oid.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$numberLong\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggBSON.numberLong.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$numberInt\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggBSON.numberInt.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$numberDouble\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggBSON.numberDouble.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$numberDecimal\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggBSON.numberDecimal.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$minKey\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggBSON.minKey.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$maxKey\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggBSON.maxKey.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$date\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggBSON.date.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$binary\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggBSON.binary.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$unwind\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.unwind.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$sortByCount\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.sortByCount.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$sort\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.sort.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$skip\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.skip.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$setWindowFields\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.setWindowFields.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$searchMeta\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.searchMeta.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$sample\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.sample.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$replaceRoot\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.replaceRoot.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$redact\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.redact.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$project\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.project.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$out\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.out.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$match\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.match.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$lookup\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.lookup.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$limit\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.limit.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$indexStats\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.indexStats.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$group\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.group.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$graphLookup\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.graphLookup.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$geoNear\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.geoNear.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$facet\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.facet.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$documents\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.documents.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$densify\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.densify.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$count\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.count.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$collStats\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.collStats.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$bucketAuto\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.bucketAuto.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$bucket\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.bucket.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$addFields\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggStageOperators.addFields.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$where\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.where.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$type\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.type.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$text\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.text.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$slice\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.slice.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$size\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.size.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$regex\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.regex.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$or\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.or.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$nor\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.nor.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$not\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.not.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$nin\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.nin.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$nearSphere\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.nearSphere.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$near\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.near.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$ne\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.ne.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$mod\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.mod.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$lte\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.lte.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$lt\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.lt.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$jsonSchema\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.jsonSchema.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$in\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.in.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$gte\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.gte.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$gt\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.gt.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$geoWithin\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.geoWithin.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$geoIntersects\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.geoIntersects.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$expr\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.expr.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$exists\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.exists.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$eq\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.eq.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$elemMatch\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.elemMatch.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$comment\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.comment.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$bitsAnySet\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.bitsAnySet.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$bitsAnyClear\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.bitsAnyClear.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$bitsAllSet\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.bitsAllSet.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$bitsAllClear\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.bitsAllClear.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$and\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.and.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$all\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.QueryOperators.all.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$zip\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.zip.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$year\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.year.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$week\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.week.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$type\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.type.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$trunc\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.trunc.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$tsIncrement\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.tsIncrement.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$tsSecond\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.tsSecond.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$toUpper\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.toUpper.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$toLower\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.toLower.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$switch\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.switch.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$subtract\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.subtract.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$substrCP\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.substrCP.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$substrBytes\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.substrBytes.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$substr\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.substr.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$strLenCP\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.strLenCP.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$strLenBytes\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.strLenBytes.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$strcasecmp\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.strcasecmp.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$sqrt\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.sqrt.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$split\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.split.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$slice\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.slice.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$size\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.size.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$setUnion\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.setUnion.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$setIsSubset\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.setIsSubset.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$setIntersection\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.setIntersection.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$setEquals\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.setEquals.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$setDifference\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.setDifference.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$second\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.second.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$reverseArray\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.reverseArray.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$reduce\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.reduce.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$range\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.range.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$pow\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.pow.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$or\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.or.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$objectToArray\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.objectToArray.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$not\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.not.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$new\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.new.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$multiply\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.multiply.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$month\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.month.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$mod\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.mod.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$minute\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.minute.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$millisecond\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.millisecond.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$meta\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.meta.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$mergeObjects\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.mergeObjects.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$map\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.map.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$log10\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.log10.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$log\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.log.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$ln\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.ln.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$lt\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.lt.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$literal\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.literal.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$let\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.let.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$isoWeekYear\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.isoWeekYear.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$isoWeek\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.isoWeek.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$isoDayOfWeek\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.isoDayOfWeek.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$isArray\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.isArray.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$indexOfCP\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.indexOfCP.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$indexOfBytes\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.indexOfBytes.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$indexOfArray\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.indexOfArray.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$in\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.in.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$ifNull\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.ifNull.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$hour\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.hour.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$gte\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.gte.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$gt\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.gt.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$getField\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.getField.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$floor\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.floor.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$filter\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.filter.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$exp\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.exp.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$eq\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.eq.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$divide\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.divide.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$dayOfYear\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.dayOfYear.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$dayOfWeek\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.dayOfWeek.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$dayOfMonth\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.dayOfMonth.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$dateTrunc\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.dateTrunc.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$dateToString\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.dateToString.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$dateToParts\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.dateToParts.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$dateSubtract\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.dateSubtract.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$dateFromString\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.dateFromString.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$dateFromParts\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.dateFromParts.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$dateDiff\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.dateDiff.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$dateAdd\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.dateAdd.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$cond\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.cond.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$concatArrays\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.concatArrays.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$concat\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.concat.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$cmp\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.cmp.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$ceil\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.ceil.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$arrayToObject\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.arrayToObject.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$arrayElemAt\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.arrayElemAt.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$anyElementTrue\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.anyElementTrue.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$and\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.and.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$allElementsTrue\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.allElementsTrue.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$add\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.add.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$abs\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggExpressionOperators.abs.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$trim\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggConverters.trim.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$toString\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggConverters.toString.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$toObjectId\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggConverters.toObjectId.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$toLong\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggConverters.toLong.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$toInt\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggConverters.toInt.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$toDouble\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggConverters.toDouble.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$toDecimal\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggConverters.toDecimal.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$toDate\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggConverters.toDate.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$toBool\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggConverters.toBool.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$rtrim\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggConverters.rtrim.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$ltrim\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggConverters.ltrim.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$convert\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggConverters.convert.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$sum\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.sum.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$shift\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.shift.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$stdDevSamp\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.stdDevSamp.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$stdDevPop\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.stdDevPop.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$rank\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.rank.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$push\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.push.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$min\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.min.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$max\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.max.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$last\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.last.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$integral\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.integral.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$first\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.first.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$expMovingAvg\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.expMovingAvg.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$documentNumber\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.documentNumber.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$denseRank\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.denseRank.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$derivative\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.derivative.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$count\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.count.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$covarianceSamp\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.covarianceSamp.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$covariancePop\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.covariancePop.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$avg\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.avg.mongodb"
+            }
+          }
+        },
+        {
+          "name": "meta.object.member.mongodb",
+          "match": "\\$addToSet\\b",
+          "captures": {
+            "0": {
+              "name": "keyword.other.aggAccumulators.addToSet.mongodb"
+            }
+          }
+        },
         {
           "include": "#comment"
         },

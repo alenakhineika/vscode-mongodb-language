@@ -2,7 +2,7 @@
   "name": "vscode-mongodb-language",
   "displayName": "vscode-mongodb-language",
   "description": "The MongoDB language support",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "author": "Alena Khineika <alena.khineika@gmail.com>",
   "license": "ISC",
   "engines": {
@@ -12,7 +12,7 @@
     "Programming Languages"
   ],
   "scripts": {
-    "update-grammar": "ts-node ./src/helper/update-grammar.ts"
+    "update-grammar": "ts-node ./src/scripts/update-grammar.ts"
   },
   "contributes": {
     "languages": [
@@ -33,13 +33,6 @@
         "language": "mongodb",
         "scopeName": "source.mongodb",
         "path": "./syntaxes/mongodb.tmLanguage.json"
-      },
-      {
-        "path": "./syntaxes/mongodb-injection.json",
-        "scopeName": "mongodb.injection",
-        "injectTo": [
-          "source.mongodb"
-        ]
       }
     ]
   },

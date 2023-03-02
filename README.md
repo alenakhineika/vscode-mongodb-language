@@ -1,23 +1,46 @@
-> The project was moved to the MongoDB repository: https://github.com/mongodb-js/vscode-mongodb-language.
-
 # VSCode MongoDB Language Extension
 
-The MongoDB syntax support for VSCode extensions.
+The MongoDB language support for VSCode extensions.
 
 ![example](./example.png)
 
+Adds a MongoDB language support to any VSCode extension.
+
+```json
+"languages": [
+  {
+    "id": "mongodb",
+    "aliases": ["MongoDB", "mongodb"],
+    "extensions": [".mongodb"],
+    "configuration": "./language-configuration.json"
+  }
+]
+```
+
 ## How to install
 
-To try this extension copy it into the `<user home>/.vscode/extensions` folder and restart VSCode.
+The MongoDB Language Extension is not released yet. To start using this extension with VSCode copy it into the `<user home>/.vscode/extensions` folder and restart VSCode.
 
-## Description
+## syntaxes/mongodb.tmLanguage.json
 
-Since [the MongoDB Shell](https://docs.mongodb.com/manual/mongo/) language is a JavaScript-based query language that supports extended JSON, also called BSON, it is beneficial to reuse the existing JavaScript grammar and inject it with the MongoDB keywords. In this case:
+The MongoDB Shell language is a JavaScript-based query language that supports extended JSON, also called BSON.
 
-- We get the JavaScript highlighting for free.
-- We don't have to maintain a grammar with the JavaScript syntax.
-- We can focus only on MongoDB keywords support.
+The `mongodb.tmLanguage.json` file is derived from [TypeScript.tmLanguage](https://github.com/Microsoft/TypeScript-TmLanguage/blob/master/TypeScript.tmLanguage) and injected with MongoDB symbols from `mongodb-symbols.json`.
 
-E.g. [The VSCode JavaScript grammar](https://github.com/microsoft/vscode/tree/master/extensions/javascript/syntaxes) is derived from the [TypeScriptReact.tmLanguage](https://github.com/Microsoft/TypeScript-TmLanguage/blob/master/TypeScriptReact.tmLanguage) grammar.
+If you download a new version of the TypeScript grammar or update the MongoDB symbols you should update the MongoDB grammar by running the script:
 
-The VSCode MongoDB Language extension injects the [TypeScript.tmLanguage](https://github.com/Microsoft/TypeScript-TmLanguage/blob/master/TypeScript.tmLanguage) grammar with MongoDB aggregation symbols.
+```bash
+npm run update-grammar
+```
+
+The script does the following changes:
+
+- Parses the `TypeScript.tmLanguage` plist and builds `mongodb.tmLanguage.json`.
+- Updates `.ts` file types, rule names and scope to `.mongodb`.
+- Injects the `mongodb.tmLanguage.json` grammar with MongoDB symbols.
+
+Compare `uuid` in `TypeScript.tmLanguage` and `mongodb.tmLanguage.json` to verify that a proper version of the grammar is being used.
+
+## syntaxes/mongodb-symbols.json
+
+The `mongodb-symbols.json` file contains symbols that are defined in [mongodb-ace-mode](https://github.com/mongodb-js/ace-mode/blob/master/index.js#L63-L263).
